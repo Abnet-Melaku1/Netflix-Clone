@@ -1,0 +1,29 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.about h2 {
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin-block: 24px;
+}
+.about h1 {
+  color: white;
+  font-size: 27px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.about button {
+  padding: 14px 4px;
+  background-color: #e50914;
+  color: white;
+  width: 180px;
+  font: 13px;
+  border: none;
+  margin: 10px 10px 10px 0;
+  font-weight: 700;
+  height: 48px;
+}

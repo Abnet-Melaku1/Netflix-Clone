@@ -1,0 +1,77 @@
+body {
+  box-sizing: border-box;
+}
+
+.row__poster {
+  object-fit: contain;
+  height: 198px;
+  margin-right: 10px;
+
+  transition: transform 450ms;
+}
+.row__poster:hover {
+  transform: scale(1.08);
+  /* opacity: 1.2; */
+}
+.row__posters {
+  display: flex;
+  /* overflow-y: hidden; */
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.row__posters::-webkit-scrollbar {
+  display: none;
+}
+
+.movie_name {
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  color: white;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 5px;
+}
+.titlee {
+  margin: 12px 0 10px;
+  font-weight: 700;
+  font-size: 26px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.row__posterLarge {
+  height: 250px;
+}
+.row__posterLarge:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+.row {
+  position: relative;
+  margin-left: 20px;
+  color: white;
+  /* overflow: scroll; */
+}
+
+.right_btn {
+  position: absolute;
+  top: 100px;
+  right: 0px;
+  font-size: 40px;
+
+  color: #dd0510;
+  cursor: pointer;
+}
+.left_btn {
+  position: absolute;
+  top: 100px;
+  left: -10px;
+  color: #dd0510;
+  cursor: pointer;
+  font-size: 40px;
+}
