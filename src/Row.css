@@ -57,21 +57,3 @@ body {
   color: white;
   /* overflow: scroll; */
 }
-
-.right_btn {
-  position: absolute;
-  top: 100px;
-  right: 0px;
-  font-size: 40px;
-
-  color: #dd0510;
-  cursor: pointer;
-}
-.left_btn {
-  position: absolute;
-  top: 100px;
-  left: -10px;
-  color: #dd0510;
-  cursor: pointer;
-  font-size: 40px;
-}

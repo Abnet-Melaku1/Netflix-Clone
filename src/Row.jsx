@@ -4,8 +4,7 @@ import axios from "./axios";
 import YouTube from "react-youtube";
 
 import movieTrailer from "movie-trailer";
-import NavigateNextIcon from "@mui/icons-material/NavigateNext";
-import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
+
 const baseUrl = "https://image.tmdb.org/t/p/original/";
 function Row({ title, fetchUrl, isLarge }) {
   const [movies, setMovies] = useState([]);
@@ -42,33 +41,10 @@ function Row({ title, fetchUrl, isLarge }) {
     },
   };
 
-  const slideRight = () => {
-    const el = document.getElementById(`row__posters`);
-    el.scrollLeft += 200;
-  };
-
-  const slideLeft = () => {
-    const el = document.getElementById(`row__posters`);
-    el.scrollLeft -= 200;
-  };
-
   return (
     <div className="row">
       <h1 className="titlee">{title}</h1>
       <div className="row__posters" id="row__posters">
-        <NavigateBeforeIcon
-          id="btn"
-          fontSize="50"
-          className="left_btn"
-          onClick={slideLeft}
-        />
-        <NavigateNextIcon
-          id="btn"
-          fontSize="50"
-          className="right_btn"
-          onClick={slideRight}
-        />
-
         {movies.map((movie) => (
           <div id="rows">
             <img
