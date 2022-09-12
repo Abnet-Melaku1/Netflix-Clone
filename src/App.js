@@ -1,11 +1,11 @@
 import "./App.css";
-import Row from "./Row";
+import Row from "./components/Row";
 import requests from "./requests";
-import Banner from "./Banner";
-import Nav from "./Nav";
-import About from "./About";
+import Banner from "./components/Banner";
+import Nav from "./components/Nav";
+import About from "./components/About";
 
-import Footer from "./Footer";
+import Footer from "./components/Footer";
 
 function App() {
   return (
