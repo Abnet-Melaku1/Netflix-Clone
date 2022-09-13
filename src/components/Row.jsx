@@ -2,13 +2,15 @@ import React, { useState, useEffect } from "react";
 import "./Row.css";
 import axios from "../axios";
 import YouTube from "react-youtube";
-
+import NavigateNextIcon from "@mui/icons-material/NavigateNext";
+import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore";
 import movieTrailer from "movie-trailer";
 
 const baseUrl = "https://image.tmdb.org/t/p/original/";
-function Row({ title, fetchUrl, isLarge }) {
+function Row({ title, fetchUrl, isLarge, id }) {
   const [movies, setMovies] = useState([]);
-  const [trailerUrl, setTrailerUrl] = useState("");
+  const [trailerUrl, setTrailerUrl] = React.useState("");
+  const [slider, setSlider] = React.useState(0);
 
   useEffect(() => {
     async function fetchData() {
@@ -33,6 +35,16 @@ function Row({ title, fetchUrl, isLarge }) {
         .catch((error) => console.log(error));
     }
   };
+  const slideLeft = () => {
+    let slider = document.getElementById("row__posters" + id);
+
+    setSlider((slider.scrollLeft = slider.scrollLeft - 450));
+  };
+  const slideRight = () => {
+    let slider = document.getElementById("row__posters" + id);
+
+    setSlider((slider.scrollLeft = slider.scrollLeft + 450));
+  };
   const opts = {
     height: "350",
     width: "100%",
@@ -44,7 +56,24 @@ function Row({ title, fetchUrl, isLarge }) {
   return (
     <div className="row">
       <h1 className="titlee">{title}</h1>
-      <div className="row__posters" id="row__posters">
+      <div className="row__posters" id={"row__posters" + id}>
+        {slider > 0 ? (
+          <NavigateBeforeIcon
+            id="btn"
+            fontSize="50"
+            className="left_btn"
+            onClick={slideLeft}
+          />
+        ) : (
+          ""
+        )}
+
+        <NavigateNextIcon
+          id="btn"
+          fontSize="50"
+          className="right_btn"
+          onClick={slideRight}
+        />
         {movies.map((movie) => (
           <div id="rows">
             <img

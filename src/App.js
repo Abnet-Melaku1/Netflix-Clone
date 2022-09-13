@@ -17,22 +17,47 @@ function App() {
           title="NETFLIX ORIGINALS"
           fetchUrl={requests.fetchNetflixOriginals}
           isLarge={true}
+          id={1}
+        />
+        <Row title="Trending Now" fetchUrl={requests.fetchTrending} id={2} />
+        <Row title="Top Rated" fetchUrl={requests.fetchTopRatedMovies} id={3} />
+        <Row
+          title="Action Movies"
+          fetchUrl={requests.fetchActionMovies}
+          id={4}
         />
         <Row
-          id="trending"
-          title="Trending Now"
-          fetchUrl={requests.fetchTrending}
+          title="Comedy Movies"
+          fetchUrl={requests.fetchComedyMovies}
+          id={5}
         />
-        <Row title="Top Rated" fetchUrl={requests.fetchTopRatedMovies} />
-        <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
-        <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />
-        <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
-        <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
-        <Row title="Documentaries " fetchUrl={requests.fetchDocumentaries} />
+        <Row
+          title="Horror Movies"
+          fetchUrl={requests.fetchHorrorMovies}
+          id={6}
+        />
+        <Row
+          title="Romance Movies"
+          fetchUrl={requests.fetchRomanceMovies}
+          id={7}
+        />
+        <Row
+          title="Documentaries "
+          fetchUrl={requests.fetchDocumentaries}
+          id={8}
+        />
       </div>
       <div className="blur">
-        <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />
-        <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
+        <Row
+          title="Comedy Movies"
+          fetchUrl={requests.fetchComedyMovies}
+          id={6}
+        />
+        <Row
+          title="Horror Movies"
+          fetchUrl={requests.fetchHorrorMovies}
+          id={7}
+        />
       </div>
       <About />
       <Footer />
